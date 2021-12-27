@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.eol": "\n",
+    "html.format.wrapLineLength": 0,
+    "eslint.validate": [
+      "html",
+      "javascript",
+      "svelte"
+    ],
+    "files.autoSave": "off",
+    "standard.usePackageJson": true,
+    "standard.run": "onSave",
+    "svelte.plugin.svelte.format.enable": false,
+    "eslint.lintTask.enable": true,
+    "javascript.format.enable": false,
+    "typescript.format.enable": false,
+    "eslint.alwaysShowStatus": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  }
+}

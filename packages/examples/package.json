@@ -1,0 +1,21 @@
+{
+  "name": "@beastfist/examples",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development EXPERIMENTAL_FASTCALL=1 nodemon server.js --config nodemon.json"
+  },
+  "dependencies": {
+    "@beastfist/core": "workspace:^0.0.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "fluent-json-schema": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

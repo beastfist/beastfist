@@ -1,0 +1,13 @@
+const consola = require('consola')
+
+const logger = consola.create({
+    // level: 4,
+    reporters: [
+      new consola.JSONReporter()
+    ],
+    defaults: {
+      additionalColor: 'white'
+    }
+})
+
+module.exports = logger

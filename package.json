@@ -1,0 +1,11 @@
+{
+  "name": "beastfist",
+  "version": "0.0.1",
+  "scripts": {
+    "dev:examples": "pnpm recursive run dev --filter @beastfist/examples",
+    "test:examples": "pnpm recursive run test --filter @beastfist/tests"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.19.0"
+  }
+}

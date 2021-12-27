@@ -1,0 +1,22 @@
+{
+  "name": "@beastfist/tests",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test cross-env TEST=api ava --tap --verbose"
+  },
+  "type": "module",
+  "dependencies": {
+    "ava": "^3.15.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "got": "^12.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
