@@ -22,6 +22,6 @@ const define = (Request) => {
   }
 }
 
-module.exports = define
+export default define
 
 

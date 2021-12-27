@@ -1,3 +1,11 @@
+import base from './base.js'
+import meta from './meta.js'
+import query from './query.js'
+import body from './body.js'
+import params from './params.js'
+import headers from './headers.js'
+import cookies from './cookies.js'
+
 /*
   Wrapper around uWebSockets.js HttpRequest
 */
@@ -38,12 +46,12 @@ const Request = function (args) {
   this._bodyBuffer = null
 }
 
-require('./base')(Request)
-require('./meta')(Request)
-require('./query')(Request)
-require('./body')(Request)
-require('./params')(Request)
-require('./headers')(Request)
-require('./cookies')(Request)
+base(Request)
+meta(Request)
+query(Request)
+body(Request)
+params(Request)
+headers(Request)
+cookies(Request)
 
-module.exports = Request
+export default Request

@@ -16,4 +16,4 @@ const define = (Response) => {
   }
 }
 
-module.exports = define
+export default define

@@ -1,4 +1,4 @@
-const qs = require('qs')
+import * as qs from 'qs'
 
 const define = (Request) => {
   Object.defineProperty(Request.prototype, 'body', {
@@ -102,4 +102,4 @@ const define = (Request) => {
 }
 
 
-module.exports = define
+export default define

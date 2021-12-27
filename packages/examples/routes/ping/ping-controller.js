@@ -8,5 +8,5 @@ class PingController {
     }
   }
   
-  module.exports = new PingController()
+  export default new PingController()
   

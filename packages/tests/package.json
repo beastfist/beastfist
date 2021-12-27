@@ -1,10 +1,10 @@
 {
   "name": "@beastfist/tests",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "test": "cross-env NODE_ENV=test cross-env TEST=api ava --tap --verbose"
   },
-  "type": "module",
   "dependencies": {
     "ava": "^3.15.0",
     "cross-env": "^7.0.3",

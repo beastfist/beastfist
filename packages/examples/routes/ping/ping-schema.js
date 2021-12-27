@@ -1,9 +1,9 @@
-const S = require('fluent-json-schema')
+import S from 'fluent-json-schema'
 
 const pingResponse = S.object()
   .prop('result', S.string())
 
-module.exports = {
+export default {
   ping: {
     response: pingResponse.valueOf()
   }

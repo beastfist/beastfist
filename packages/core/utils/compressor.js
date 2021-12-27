@@ -1,8 +1,7 @@
-const { createBrotliCompress, createDeflate, createGzip } = require('zlib')
-
+import { createBrotliCompress, createDeflate, createGzip } from 'zlib'
 const priority = ['br', 'gzip', 'deflate']
 
-module.exports = (stream, reqHeaders, resHeaders) => {
+export default (stream, reqHeaders, resHeaders) => {
   const contentEncoding = reqHeaders['accept-encoding']
   
   const encoding = priority.find(

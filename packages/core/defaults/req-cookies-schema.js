@@ -1,7 +1,7 @@
-const S = require('fluent-json-schema')
+import S from 'fluent-json-schema'
 
 const cookies = S.object()
   .prop('Authorization', S.string())
 
 
-module.exports = cookies
+export default cookies

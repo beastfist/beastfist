@@ -1,10 +1,8 @@
-const mime = require('mime-types')
-const { contentType } = mime
-const { basename } = require('path')
-const fs = require('fs')
-const { createReadStream } = fs
+import { contentType } from 'mime-types'
+import { basename } from 'path'
+import fs from 'fs'
 
-// const compress = require('../utils/compressor')
+const { createReadStream } = fs
 
 const define = (Response) => {
   Response.prototype.sendFile = function (path, lastModified = true, compressed = false) {
@@ -77,4 +75,4 @@ const define = (Response) => {
   }
 }
 
-module.exports = define
+export default define

@@ -1,4 +1,4 @@
-const compress = require('../utils/compressor')
+import compress from '../utils/compressor.js'
 
 const define = (Response) => {
   Response.prototype.pipe = function (stream, size, compressed = false) {
@@ -80,4 +80,4 @@ const define = (Response) => {
   }
 }
 
-module.exports = define
+export default define

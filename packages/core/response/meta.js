@@ -1,4 +1,4 @@
-const defineProperties = (Response) => {
+const define = (Response) => {
   Object.defineProperty(Response.prototype, 'logger', {
     get: function () {
       return this.route.logger
@@ -47,4 +47,4 @@ const defineProperties = (Response) => {
 }
 
 
-module.exports = defineProperties
+export default define

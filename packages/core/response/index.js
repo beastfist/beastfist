@@ -1,3 +1,12 @@
+import base from './base.js'
+import meta from './meta.js'
+import headers from './headers.js'
+import cookies from './cookies.js'
+import pipe from './pipe.js'
+import send from './send.js'
+import sendFile from './sendFile.js'
+
+
 /*
   Wrapper around uWebSockets.js HttpResponse
 */
@@ -25,7 +34,7 @@ const Response = function (args) {
     this._abortHandlers.add(() => {
       self._isDone = true
     })
-    this.res.onAborted(() => {
+    self.res.onAborted(() => {
       self._isDone = true
       for (const handler in self._abortHandlers) {
         handler()
@@ -34,13 +43,12 @@ const Response = function (args) {
   }
 }
 
-require('./base')(Response)
-require('./meta')(Response)
-require('./headers')(Response)
-require('./cookies')(Response)
-require('./pipe')(Response)
-require('./send')(Response)
-require('./sendFile')(Response)
+base(Response)
+meta(Response)
+headers(Response)
+cookies(Response)
+pipe(Response)
+send(Response)
+sendFile(Response)
 
-
-module.exports = Response
+export default Response

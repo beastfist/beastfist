@@ -1,7 +1,7 @@
-const Request = require('../request')
-const Response = require('../response')
+import Request from '../request/index.js'
+import Response from '../response/index.js'
 
-module.exports = (route, handler) => {
+export default (route, handler) => {
   return (res, req) => {
     let response
     let request

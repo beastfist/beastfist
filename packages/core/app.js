@@ -1,7 +1,7 @@
-const uws = require('uWebSockets.js')
-const Route = require('./route')
-
-const logger = require('./logger')
+import uws from 'uWebSockets.js'
+import Route from './route.js'
+import logger from './logger.js'
+import * as readline from 'node:readline/promises'
 
 class App {
   constructor (config = {}) {
@@ -140,7 +140,7 @@ class App {
     const self = this
 
     if (process.platform === 'win32') {
-      const rl = require('readline').createInterface({
+      const rl = readline.createInterface({
         input: process.stdin,
         output: process.stdout
       })
@@ -207,4 +207,4 @@ class App {
   }
 }
 
-module.exports = App
+export default App

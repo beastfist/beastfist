@@ -1,10 +1,13 @@
-const fastJson = require('fast-json-stringify')
-const compile = require('turbo-json-parse')
-const compress = require('./utils/compressor')
-const { getParamNames, prepare, areAsync } = require('./utils/http-utils')
-
-const serializer = require('./utils/serializer')
-const parser = require('./utils/parser')
+import * as fastJson from 'fast-json-stringify'
+import * as compile from 'turbo-json-parse'
+import compress from './utils/compressor.js'
+import { getParamNames, prepare, areAsync } from './utils/http-utils.js'
+import serializer from './utils/serializer.js'
+import parser from './utils/parser.js'
+import httpAsync from './handler/http-async.js'
+import httpSync from './handler/http-sync.js'
+import wsUpgradeAsync from './handler/ws-upgrade-async.js'
+import wsUpgradeSync from './handler/ws-upgrade-sync.js'
 
 
 class Route {
@@ -59,9 +62,9 @@ class Route {
    */
   httpHandler () {
     if (this.isAsync) {
-      return require('./handler/http-async')(this, this.handler)
+      return httpAsync(this, this.handler)
     } else {
-      return require('./handler/http-sync')(this, this.handler)
+      return httpSync(this, this.handler)
     }
   }
 
@@ -71,13 +74,13 @@ class Route {
    */
   wsHandler () {
     if (this.isAsync) {
-      this.upgrade = require('./handler/ws-upgrade-async')(this, this.upgrade)
+      this.upgrade = wsUpgradeAsync(this, this.upgrade)
     } else {
-      this.upgrade = require('./handler/ws-upgrade-sync')(this, this.upgrade)
+      this.upgrade = wsUpgradeSync(this, this.upgrade)
     }
 
     return this
   }
 }
 
-module.exports = Route
+export default Route

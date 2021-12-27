@@ -1,4 +1,4 @@
-const cookie = require('cookie')
+import * as cookie from 'cookie'
 
 const define = (Request) => {
   Object.defineProperty(Request.prototype, 'cookies', {
@@ -28,4 +28,4 @@ const define = (Request) => {
 }
 
 
-module.exports = define
+export default define

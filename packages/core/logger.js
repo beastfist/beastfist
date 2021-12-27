@@ -1,4 +1,4 @@
-const consola = require('consola')
+import consola from 'consola'
 
 const logger = consola.create({
     // level: 4,
@@ -9,5 +9,4 @@ const logger = consola.create({
       additionalColor: 'white'
     }
 })
-
-module.exports = logger
+export default logger

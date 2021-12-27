@@ -1,4 +1,4 @@
-const cookie = require('cookie')
+import * as cookie from 'cookie'
 
 const define = (Response) => {
   Response.prototype.setCookie = function (name, value, options) {
@@ -52,4 +52,4 @@ const define = (Response) => {
 }
 
 
-module.exports = define
+export default define

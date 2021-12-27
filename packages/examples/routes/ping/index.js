@@ -1,16 +1,18 @@
-const schema = require('./ping-schema')
+import schema from './ping-schema.js'
+import controller from './ping-controller.js' 
 
-module.exports = [
+
+export default [
   {
     method: 'GET',
     url: '/api/ping',
     schema: schema.ping,
-    handler: require('./ping-controller').ping
+    handler: controller.ping
   },
   {
     method: 'GET',
     url: '/api/pid',
     // schema: schema.ping,
-    handler: require('./ping-controller').pid
+    handler: controller.pid
   }
 ]

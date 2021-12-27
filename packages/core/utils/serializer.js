@@ -1,8 +1,8 @@
-const fastJson = require('fast-json-stringify')
-const { isHttpCode } = require('./http-utils')
+import fastJson from 'fast-json-stringify'
+import { isHttpCode } from './http-utils.js'
 
 
-module.exports = (schema) => {
+export default (schema) => {
   if (!schema || !schema.response) {
     return JSON.stringify
   }

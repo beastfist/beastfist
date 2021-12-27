@@ -1,4 +1,4 @@
-const parse = require('querystring').parse
+import { parse } from 'querystring'
 
 const define = (Request) => {
   Object.defineProperty(Request.prototype, 'query', {
@@ -26,5 +26,4 @@ const define = (Request) => {
   })
 }
 
-
-module.exports = define
+export default define

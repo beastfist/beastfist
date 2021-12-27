@@ -1,4 +1,4 @@
-const defineMethods = (Response) => {
+const define = (Response) => {
   Response.prototype.getProxiedRemoteAddress = function () {
     return this.res.getProxiedRemoteAddress()
   }
@@ -126,4 +126,4 @@ const defineMethods = (Response) => {
   }
 }
 
-module.exports = defineMethods
+export default define

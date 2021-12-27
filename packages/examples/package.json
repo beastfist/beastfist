@@ -1,6 +1,7 @@
 {
   "name": "@beastfist/examples",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV=development EXPERIMENTAL_FASTCALL=1 nodemon server.js --config nodemon.json"
   },

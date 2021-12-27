@@ -1,3 +1,5 @@
-module.exports = [
-    ...require('./ping')
+import ping from './ping/index.js'
+
+export default [
+    ...ping
 ]

@@ -1,6 +1,6 @@
-const compile = require('turbo-json-parse')
+import * as compile from 'turbo-json-parse'
 
-module.exports = (schema) => {
+export default (schema) => {
   const result = {
     query: null,
     params: null,
